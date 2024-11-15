@@ -11,7 +11,17 @@ import SwiftUI
 struct VisionSwiftUIBasicsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContainerView()
         }
+        
+        WindowGroup(id: "Window Vision") {
+            ItemContentView(color: .blue, text: "Vision")
+        }
+        .defaultSize(CGSize(width: 400, height: 320))
+        
+        WindowGroup(id: "Window Sun") {
+            ItemContentView(color: .orange, text: "Sun")
+        }
+        .defaultSize(CGSize(width: 400, height: 320))
     }
 }
